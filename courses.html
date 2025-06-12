@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Courses – Honeywell InfoTech</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  background-color: #ffffff; /* fallback color */
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('svg.svg') no-repeat center center;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+
+    section.courses {
+      padding: 5rem 2rem;
+      /* background:  */
+        /* linear-gradient(to bottom right, rgba(255,255,255,0.95), rgba(250, 250, 250, 0.9)), */
+        /* url('https://www.transparenttextures.com/patterns/cubes.png'); */
+      background-size: cover;
+      background-repeat: repeat;
+      text-align: center;
+        color: #222;
+         font-family: 'Space Grotesk', sans-serif;
+    }
+    
+
+    .courses h2 {
+      font-size: 2.8rem;
+      color: #e63946;
+      margin-bottom: 3rem;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+    }
+
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .course-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      padding: 2rem 1.5rem 3rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      border: 1px solid #eee;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      /* text-align: left; */
+    }
+
+    .course-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    .course-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e63946;
+    }
+
+    .course-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .course-info {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+
+    .course-duration {
+      position: absolute;
+      bottom: 1.2rem;
+      left: 3.5rem;
+      font-size: 0.85rem;
+      color: #e63946;
+      font-weight: 600;
+      background: #fff8f8;
+      padding: 0.3rem 0.7rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    @media (max-width: 600px) {
+      .courses h2 {
+        font-size: 2rem;
+      }
+
+      .course-card {
+        padding: 1.5rem 1rem 3rem;
+      }
+
+      .course-title {
+        font-size: 1.1rem;
+      }
+
+      .course-duration {
+        font-size: 0.75rem;
+        left: 11rem;
+      }
+    }
+  </style>
+    <style>
+  
+
+    .cta-bar {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      width: 100%;
+      height: 100px;
+      margin-top: 30px;
+      background: linear-gradient(90deg, #fa3d3d, #f77f00);
+      display: flex;
+      border-radius: 40px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      box-sizing: border-box;
+      color: #fff;
+      flex-wrap: wrap;
+    }
+
+    .cta-text {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .cta-button {
+      background: #ffffff;
+      color: #000000;
+      border: none;
+      border-radius: 30px;
+      padding: 0.6rem 1.4rem;
+      font-size: 1rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #e1ffec;
+      color: #000000;
+    }
+
+    .cta-button svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    @media (max-width: 600px) {
+      .cta-bar {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      .cta-text {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="courses">
+    <h2>Our Courses</h2>
+    <div class="courses-grid">
+      
+      <div class="course-card">
+        <div class="course-icon">💻</div>
+        <div class="course-title">C Programming</div>
+        <div class="course-info">Learn the fundamentals of programming and logic building with C language.</div>
+        <div class="course-duration">Duration: 2 Months</div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-icon">🖥️</div>
+        <div class="course-title">Computer Basics</div>
+        <div class="course-info">Perfect for beginners — cover MS Office, internet, typing, and file handling.</div>
+        <div class="course-duration">Duration: 1 Month</div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-icon">📊</div>
+        <div class="course-title">Tally with GST</div>
+        <div class="course-info">Master accounting and inventory management using Tally ERP with GST.</div>
+        <div class="course-duration">Duration: 2 Months</div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-icon">🔧</div>
+        <div class="course-title">Hardware & Networking</div>
+        <div class="course-info">Get hands-on skills with assembling, troubleshooting, and networking computers.</div>
+        <div class="course-duration">Duration: 3 Months</div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-icon">🌐</div>
+        <div class="course-title">Web Development</div>
+        <div class="course-info">Build modern websites using HTML, CSS, JavaScript, and real-world projects.</div>
+        <div class="course-duration">Duration: 3 Months</div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-icon">🛡️</div>
+        <div class="course-title">Cybersecurity Basics</div>
+        <div class="course-info">Understand safe browsing, data protection, and digital security essentials.</div>
+        <div class="course-duration">Duration: 1.5 Months</div>
+      </div>
+
+         <div class="course-card">
+        <div class="course-icon">🌐</div>
+        <div class="course-title">Web Development</div>
+        <div class="course-info">Build modern websites using HTML, CSS, JavaScript, and real-world projects.</div>
+        <div class="course-duration">Duration: 3 Months</div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-icon">🛡️</div>
+        <div class="course-title">Cybersecurity Basics</div>
+        <div class="course-info">Understand safe browsing, data protection, and digital security essentials.</div>
+        <div class="course-duration">Duration: 1.5 Months</div>
+      </div>
+
+    </div>
+      <div class="cta-bar">
+    <div class="cta-text">Ready to boost your skills? Connect Now</div>
+    <a href="https://wa.me/919999999999" target="_blank" class="cta-button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <path d="M16 .5C7.44.5.5 7.44.5 16c0 2.823.741 5.48 2.019 7.804L.5 31.5l7.936-2.046A15.45 15.45 0 0 0 16 31.5c8.56 0 15.5-6.94 15.5-15.5S24.56.5 16 .5Zm0 28.165c-2.538 0-4.913-.71-6.938-1.936l-.495-.29-4.706 1.212 1.23-4.59-.322-.519a12.97 12.97 0 0 1-2.048-6.89c0-7.183 5.843-13.027 13.028-13.027s13.028 5.844 13.028 13.027-5.843 13.027-13.027 13.027Zm7.383-9.75c-.414-.207-2.46-1.214-2.843-1.351-.383-.138-.662-.207-.94.207s-1.077 1.351-1.32 1.63c-.242.276-.482.31-.896.103-.414-.207-1.75-.646-3.33-2.063-1.231-1.098-2.06-2.455-2.3-2.87-.241-.414-.027-.636.181-.843.185-.185.414-.482.621-.724.207-.242.276-.414.414-.69.138-.276.07-.518-.035-.724-.104-.207-.94-2.27-1.288-3.11-.34-.815-.686-.707-.94-.707h-.802c-.276 0-.724.104-1.104.518s-1.448 1.414-1.448 3.448 1.483 3.995 1.69 4.27c.207.276 2.917 4.455 7.067 6.257 2.637 1.139 3.662 1.235 4.984 1.039 1.035-.155 2.46-1.006 2.808-1.98.345-.975.345-1.806.242-1.98-.104-.173-.38-.276-.793-.483Z"/>
+      </svg>
+      Contact Us
+    </a>
+  </div>
+  </section>
+  
+
+</body>
+</html>

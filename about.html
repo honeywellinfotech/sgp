@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Honeywell InfoTech</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      color: #e63946;
+    }
+
+    section {
+      padding: 2rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .about-hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      background: linear-gradient(135deg, #fff, #fce3e3);
+      padding: 5rem 2rem;
+      border-bottom: 4px solid #e63946;
+    }
+
+    .about-hero .text-content {
+      flex: 1;
+    }
+
+    .about-hero .text-content h1 {
+      font-size: 2.5rem;
+    }
+
+    .about-hero p{
+      font-size: 1.2rem;
+    }
+    .about-hero img {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .feature-box {
+      flex: 1 1 250px;
+      background: #fff;
+      border-left: 5px solid #e63946;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .founder {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      background-color: #fff;
+      padding: 3rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .founder img {
+      width: 250px;
+      border-radius: 10px;
+    }
+
+    .certificates {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .certificates img {
+      width: 150px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      background: #fce3e3;
+      padding: 2rem 1rem;
+      border-radius: 8px;
+      margin: 3rem auto;
+      gap: 40px;
+    }
+
+      .stats p{
+        margin: 0;
+        padding: 0;
+
+      }
+    .stat {
+      font-size: 1.2rem;
+    }
+
+    .stat h3 {
+      font-size: 2rem;
+      color: #222;
+       margin: 0;
+        padding: 0;
+    }
+
+    .cta {
+      background: #e63946;
+      color: white;
+      text-align: center;
+      padding: 3rem 2rem;
+      border-radius: 8px;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background: #fff;
+      color: #e63946;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .cta a:hover {
+      background: #f9dcdc;
+    }
+
+    @media (max-width: 768px) {
+      .about-hero,
+      .founder,
+      .stats {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-hero img,
+      .founder img {
+        width: 100%;
+        max-width: 300px;
+      }
+      #about{
+        text-align: left;
+      }
+      #anwtxt{
+        margin-top: -40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="text-content">
+      <h1 id="about">About, <br>Honeywell InfoTech</h1>
+      <p>Honeywell InfoTech stands as a respected name in Siruguppa’s education landscape, offering certified computer courses designed for all learners. Our student-first approach, expert faculty, and hands-on methodology make us a preferred choice for skill development.</p>
+    </div>
+    <img src="hgi.png" alt="Founder Anwar Sir" />
+  </section>
+
+  <!-- Institute Highlights -->
+  <section>
+    <h2>What Makes Us Stand Out</h2>
+    <div class="features">
+      <div class="feature-box">
+        <h3>👨‍🏫 Expert Faculty</h3>
+        <p>Our trainers are experienced professionals passionate about teaching.</p>
+      </div>
+      <div class="feature-box">
+        <h3>📜 Govt Certifications</h3>
+        <p>Recognized credentials that add value to your resume.</p>
+      </div>
+      <div class="feature-box">
+        <h3>💻 Practical Training</h3>
+        <p>Hands-on labs, projects, and real-world assignments.</p>
+      </div>
+      <div class="feature-box">
+        <h3>🔒 Ethical Standards</h3>
+        <p>Transparent, ethical, and focused on long-term learning.</p>
+      </div>
+      <div class="feature-box">
+        <h3>🏆 Trusted Legacy</h3>
+        <p>Hundreds of students have built careers with our foundation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder Section -->
+  <section>
+    <hr>
+   
+    <div class="founder" style="margin-top: 20px;">
+     
+      <div>
+      <img src="hgi.png" alt="Anwar Sir">
+      </div>
+      <div id="anwtxt"> 
+        <h3>Mr. Anwar</h3>
+        <p style="font-size: 1.3rem;">Our founder, Mr. Anwar, brings years of experience as a Microsoft Certified Professional, guiding the institute with industry-standard knowledge.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section>
+    <hr>
+    <h2>Recognitions & Certificates</h2>
+    <div class="certificates">
+      <img src="hgi.png" alt="Certificate 1">
+      <img src="hgi.png" alt="Certificate 2">
+      <img src="hgi.png" alt="Certificate 3">
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+   
+  <section class="stats">
+    <!-- <hr> -->
+    <div class="stat">
+      <h3>10+</h3>
+      <p>Courses Offered</p>
+    </div>
+    <div class="stat">
+      <h3>500+</h3>
+      <p>Students Trained</p>
+    </div>
+    <div class="stat">
+      <h3>15+</h3>
+      <p>Years Experience</p>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta" style="margin-top: -40px;">
+    <h2>Ready to Learn and Grow?</h2>
+    <p>Join Honeywell InfoTech today and upgrade your skills with expert guidance and certified training.</p>
+    <a href="contact.html">Contact Us</a>
+  </section>
+
+</body>
+</html>

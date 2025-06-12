@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Why Choose Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+ 
+
+    .why-us {
+      background: linear-gradient(135deg, #fff0f0, #ffeaea);
+      padding: 5rem 2rem;
+         font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .why-us h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #d62828;
+      margin-bottom: 2rem;
+    }
+
+    .features {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.2rem;
+      background: #fff;
+      border-left: 5px solid #e63946;
+      padding: 1.5rem 1.5rem 1.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-icon {
+      font-size: 1.8rem;
+      color: #e63946;
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+
+    .feature-content h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #1b1b1b;
+    }
+
+    .feature-content p {
+      margin: 0.4rem 0 0;
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .feature {
+        flex-direction: row;
+        padding: 1.2rem;
+      }
+
+      .why-us h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="why-us">
+    <h2>Why Choose Us</h2>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">👨‍🏫</div>
+        <div class="feature-content">
+          <h3>Expert Faculty</h3>
+          <p>Skilled instructors with deep industry and teaching experience.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">📜</div>
+        <div class="feature-content">
+          <h3>Government Certifications</h3>
+          <p>Get recognized credentials that boost your job opportunities.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">💼</div>
+        <div class="feature-content">
+          <h3>Placement Support</h3>
+          <p>80% of students secure jobs or internships post-training.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🖥️</div>
+        <div class="feature-content">
+          <h3>Hands-On Learning</h3>
+          <p>Real-time practice, lab sessions, and project-based curriculum.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

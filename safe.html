@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkillEdge Institute</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+   /* courses  */
+  
+    section.courses {
+      padding: 5rem 2rem;
+      background: 
+        linear-gradient(to bottom right, rgba(255,255,255,0.95), rgba(250, 250, 250, 0.9)),
+        url('https://www.transparenttextures.com/patterns/cubes.png');
+      background-size: cover;
+      background-repeat: repeat;
+      text-align: center;
+        color: #222;
+         font-family: 'Space Grotesk', sans-serif;
+    }
+    
+
+    .courses h2 {
+      font-size: 2.8rem;
+      color: #e63946;
+      margin-bottom: 3rem;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+    }
+
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .course-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      padding: 2rem 1.5rem 3rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      border: 1px solid #eee;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      /* text-align: left; */
+    }
+
+    .course-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    .course-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e63946;
+    }
+
+    .course-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .course-info {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+
+    .course-duration {
+      position: absolute;
+      bottom: 1.2rem;
+      left: 3.5rem;
+      font-size: 0.85rem;
+      color: #e63946;
+      font-weight: 600;
+      background: #fff8f8;
+      padding: 0.3rem 0.7rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    @media (max-width: 600px) {
+      .courses h2 {
+        font-size: 2rem;
+      }
+
+      .course-card {
+        padding: 1.5rem 1rem 3rem;
+      }
+
+      .course-title {
+        font-size: 1.1rem;
+      }
+
+      .course-duration {
+        font-size: 0.75rem;
+        left: 11rem;
+      }
+    }
+  </style>
+   <style>
+  
+
+    .course-ticker {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     max-width:  100vw;
+      height: 100px;
+      margin-top: 40px;
+      /* overflow: hidden; */
+      /* background: linear-gradient(to right, #ffffff, #f6f6f6); */
+      /* box-shadow: inset 0 1px 3px rgba(0,0,0,0.08); */
+      display: flex;
+      align-items: center;
+      position: relative;
+      border-top: 1px solid rgba(0,0,0,0.05);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .ticker-wrap {
+      display: flex;
+      white-space: nowrap;
+      animation: scrollTicker 25s linear infinite;
+    }
+
+    .ticker-wrap span {
+      background: #ffffff;
+      border: 1px solid #dddddd;
+      margin: 0 1rem;
+      padding: 0.6rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 600;
+      color: #1b1b1b;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .ticker-wrap span:hover {
+      background: #e63946;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    @keyframes scrollTicker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .ticker-content {
+      display: flex;
+    }
+
+    @media (max-width: 768px) {
+      .ticker-wrap span {
+        margin: 0 0.6rem;
+        padding: 0.5rem 1.2rem;
+        font-size: 0.9rem;
+      }
+
+      .course-ticker {
+         height: 80px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .ticker-wrap span {
+        margin: 0 0.5rem;
+        padding: 0.4rem 1rem;
+        font-size: 0.75rem;
+      }
+
+      .course-ticker {
+        height: 70px;
+       
+        margin-top: -30px;
+        /* margin-bottom: 20px; */
+        /* background: #000; */
+        min-width: 100%!important;
+        max-width: 100%!important;
+  
+        overflow: hidden;
+      }
+    }
+  </style>
+  <style>
+    :root {
+      --red: #e63946;
+      --white: #ffffff;
+      --dark: #1b1b1b;
+      --glass: rgba(255, 255, 255, 0.3);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: var(--white);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      padding: 0rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-weight: 700;
+      color: var(--red);
+      font-size: 1.4rem;
+    }
+
+    .logo img{
+      height: 70px;
+      width: 70px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: var(--red);
+      transition: width 0.3s ease-in-out;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Hamburger */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      z-index: 1002;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: var(--dark);
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .menu-toggle.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #ffffff 49.6%, #fce3e3 50%);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 5rem 3rem 8rem;
+      flex-wrap: wrap;
+      position: relative;
+      height: 100vh;
+    }
+
+    .hero-text {
+      /* flex: 1 1 400px;   */
+      max-width: 500px;
+    }
+
+    .glitch {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--red);
+      position: relative;
+    }
+
+    .glitch::before,
+    .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      width: 100%;
+      color: var(--red);
+    }
+
+    .glitch::before {
+      top: -2px;
+      left: 2px;
+      text-shadow: -1px 0 red;
+      animation: glitchTop 2s infinite linear alternate-reverse;
+    }
+
+    .glitch::after {
+      top: 2px;
+      left: -2px;
+      text-shadow: 1px 0 var(--dark);
+      animation: glitchBottom 2s infinite linear alternate-reverse;
+    }
+
+    @keyframes glitchTop {
+      0% { clip-path: inset(0 0 90% 0); }
+      50% { clip-path: inset(20% 0 50% 0); }
+      100% { clip-path: inset(40% 0 30% 0); }
+    }
+
+    @keyframes glitchBottom {
+      0% { clip-path: inset(90% 0 0 0); }
+      50% { clip-path: inset(60% 0 20% 0); }
+      100% { clip-path: inset(30% 0 40% 0); }
+    }
+
+    .hero-text p {
+      margin-top: 1rem;
+      font-size: 1.4rem;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .hero-text button {
+      margin-top: 2rem;
+      padding: 0.9rem 2rem;
+      background: var(--red);
+      color: white;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .hero-text button:hover {
+      transform: translateY(-3px);
+    }
+
+   .imgst{
+        display: flex;
+        flex-direction: column;
+        gap:30px;
+        margin-top: 1%;
+    }
+
+    .hero-img {
+      width: 70%;
+      max-width: 280px;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 12px 60px 12px 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s;
+      filter: grayscale(10%) contrast(1.05) brightness(1.02);
+      background-color: #111;
+      flex: 1 1 300px;
+      margin: auto;
+      display: block;
+    }
+
+    .hero-img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35), 0 0 0 2px rgba(255, 0, 0, 0.1);
+      filter: grayscale(0%) contrast(1.1) brightness(1.07);
+    }
+.lead{
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 400px;
+}
+    /* Floating Stats */
+    @keyframes floaty {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0); }
+    }
+
+    .stats {
+      /* position: absolute; */
+      /* bottom: -10px; */
+      /* left: 50%; */
+      /* transform: translateX(-50%); */
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      z-index: 10;
+    }
+
+    .stat {
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      padding: 1rem 1.5rem;
+      border-radius: 40px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      font-weight: 600;
+      color: var(--dark);
+      white-space: nowrap;
+      animation: floaty 3s ease-in-out infinite;
+    }
+    .stat2 {
+      animation: floaty 2s ease-in-out infinite !important;
+    }
+    .stat3 {
+      animation: floaty 4s ease-in-out infinite !important;
+    }
+
+ 
+
+    @media (max-width: 768px) {
+
+      nav {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: var(--white);
+        padding: 1rem;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        z-index: 1001;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .hero {
+        flex-direction: row;
+        text-align: center;
+        /* gap: -90px; */
+      max-height: 100vh;
+      
+        background: linear-gradient(130deg, #ffffff 49%, #fce3e3 50%);
+        padding: 2rem 1rem 1rem;
+      }
+
+      .imgst{
+        margin-top: 40px;
+         gap:20px;
+         flex-direction: row;
+      }
+
+.hero-img {
+  width: 100%;
+  max-height: 200px;
+  max-width: 250px;
+  aspect-ratio: 1 / 1;
+  border-radius: 40% 60% 60% 40% / 50% 50% 50% 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(255, 0, 0, 0.3);
+}
+.lead{
+    font-size: 15px;
+    padding-top: 5px;
+    padding-left: 30px;
+}
+
+      .hero-text{
+        margin-top: 40px !important;
+        margin-bottom: -60px;
+      }
+      .hero-text p{
+        font-size: 1.2rem;
+      }
+      .hero button{
+        margin-top: 15px;
+      }
+
+      .stats {
+        flex-direction: column;
+       justify-content: center;
+       align-items: center;
+        gap: 0.6rem;
+      }
+      .stat{
+        animation: floaty 3s ease-in-out infinite !important;
+        font-size: smaller;
+          padding: 1rem 1.5rem;
+      }
+       .stat2 {
+      animation: floaty 2s ease-in-out infinite !important;
+     
+    
+    }
+    .stat3 {
+      animation: floaty 4s ease-in-out infinite !important;
+  
+    }
+
+      
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"><img src="hgi.png" alt=""></div>
+    <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('show'); this.classList.toggle('open');">
+      <span></span><span></span><span></span>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Courses</a>
+      <a href="#">Gallery</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1 class="glitch" data-text="HONEYWELL INFOTECH">HONEYWELL <br> INFOTECH</h1>
+<p>Honeywell InfoTech – Siruguppa’s trusted name in computer education. Learn from certified experts and elevate your skills with government-approved courses.</p>
+
+
+
+
+      <button>Get Started</button>
+    </div>
+<div class="imgst">
+    <div>
+    <img src="https://i.ytimg.com/vi/zEr-mm8OSGo/sddefault.jpg" alt="Student Image" class="hero-img" />
+    <h3 class="lead">Lead by: MR Anwar</h3>
+    </div>
+
+    <div class="stats">
+      <div class="stat">🎓 1000+ Students</div>
+      <div class="stat2 stat">🏅 Govt Certified</div>
+      <div class="stat3 stat">💼 80% Placement</div>
+    </div>
+</div>
+ <section class="course-ticker">
+    <div class="ticker-wrap">
+      <div class="ticker-content">
+        <span>C Language</span>
+        <span>Tally ERP</span>
+        <span>Computer Basics</span>
+        <span>Hardware & Networking</span>
+        <span>Typing Skills</span>
+        <span>Web Development</span>
+        <span>Python</span>
+        <span>MS Office</span>
+        <span>Graphic Design</span>
+        <span>C Language</span>
+        <span>Tally ERP</span>
+        <span>Computer Basics</span>
+        <span>Hardware & Networking</span>
+        <span>Typing Skills</span>
+        <span>Web Development</span>
+        <span>Python</span>
+        <span>MS Office</span>
+        <span>Graphic Design</span>
+      </div>
+    </div>
+  </section>
+
+
+  </section>
+  
+  
+  <section class="courses">
+    <h2>Our Courses</h2>
+    <div class="courses-grid">
+      
+      <div class="course-card">
+        <div class="course-icon">💻</div>
+        <div class="course-title">C Programming</div>
+        <div class="course-info">Learn the fundamentals of programming and logic building with C language.</div>
+        <div class="course-duration">Duration: 2 Months</div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-icon">🖥️</div>
+        <div class="course-title">Computer Basics</div>
+        <div class="course-info">Perfect for beginners — cover MS Office, internet, typing, and file handling.</div>
+        <div class="course-duration">Duration: 1 Month</div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-icon">📊</div>
+        <div class="course-title">Tally with GST</div>
+        <div class="course-info">Master accounting and inventory management using Tally ERP with GST.</div>
+        <div class="course-duration">Duration: 2 Months</div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-icon">🔧</div>
+        <div class="course-title">Hardware & Networking</div>
+        <div class="course-info">Get hands-on skills with assembling, troubleshooting, and networking computers.</div>
+        <div class="course-duration">Duration: 3 Months</div>
+      </div>
+
+      <button class="coursesmore">More -></button>
+
+      <!-- <div class="course-card">
+        <div class="course-icon">🌐</div>
+        <div class="course-title">Web Development</div>
+        <div class="course-info">Build modern websites using HTML, CSS, JavaScript, and real-world projects.</div>
+        <div class="course-duration">Duration: 3 Months</div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-icon">🛡️</div>
+        <div class="course-title">Cybersecurity Basics</div>
+        <div class="course-info">Understand safe browsing, data protection, and digital security essentials.</div>
+        <div class="course-duration">Duration: 1.5 Months</div>
+      </div> -->
+
+    </div>
+  </section>
+
+</body>
+</html>
