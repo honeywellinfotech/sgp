@@ -3,240 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SkillEdge Institute</title>
+  <title>Honeywell Info-tech</title>
+  <link rel="icon" type="image/png" href="fav.png">
+
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-   /* courses  */
-   a{
-  text-decoration: none;
-   }
-  .coursesmore{
-     margin-top: 1.5rem;
-   width: 150px;
-      padding: 10px 20px;
-      position: absolute;
-      right: 100px;
-      background: var(--red);
-      color: white;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 30px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
-      transition: transform 0.2s ease;
-  }
-    section.courses {
-      padding: 5rem 2rem;
-      /* margin-top: 80px; */
-      padding-bottom: 100px;
-      background: 
-        linear-gradient(to bottom right, rgba(255,255,255,0.95), rgba(250, 250, 250, 0.9)),
-        url('https://www.transparenttextures.com/patterns/cubes.png');
-      background-size: cover;
-      background-repeat: repeat;
-      text-align: center;
-        color: #222;
-         font-family: 'Space Grotesk', sans-serif;
-         position: relative;
-    }
-    
-     .courses::before{
-   content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 4px;
-      background-color: #010000;
-      border-radius: 2px;
-      }
+   
 
-    .courses h2 {
-      font-size: 2.8rem;
-      color: #e63946;
-      margin-bottom: 3rem;
-      font-weight: 700;
-      position: relative;
-      display: inline-block;
-    }
 
-    .courses-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 2rem;
-      max-width: 1200px;
-      margin: auto;
-    }
 
-    .course-card {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(12px);
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-      padding: 2rem 1.5rem 3rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      border: 1px solid #eee;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      /* text-align: left; */
-    }
 
-    .course-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-    }
 
-    .course-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #e63946;
-    }
 
-    .course-title {
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
 
-    .course-info {
-      font-size: 0.95rem;
-      color: #555;
-      line-height: 1.5;
-      flex-grow: 1;
-    }
 
-    .course-duration {
-      position: absolute;
-      bottom: 1.2rem;
-      left: 3.5rem;
-      font-size: 0.85rem;
-      color: #e63946;
-      font-weight: 600;
-      background: #fff8f8;
-      padding: 0.3rem 0.7rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
+  <!-- 44444444444444444444444444444444444444  Hero 4444444444444444444444444444444444 -->
 
-    @media (max-width: 600px) {
-      .courses h2 {
-        font-size: 2rem;
-      }
 
-      .course-card {
-        padding: 1.5rem 1rem 3rem;
-      }
 
-      .course-title {
-        font-size: 1.1rem;
-      }
 
-      .course-duration {
-        font-size: 0.75rem;
-        left: 11rem;
-      }
-      .coursesmore{
-          margin-top: 0.7rem;
-   width: 120px;
-      padding: 10px 20px;
-      position: absolute;
-      right: 40px;
-      background: var(--red);
-    
-      font-size: 0.8rem;
-      }
-    }
-  </style>
-   <style>
-  
 
-    .course-ticker {
-     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-     max-width:  110vw !important;
-      height: 100px;
-      margin-top: 10px;
-      /* margin-bottom: 20px; */
-      overflow: hidden;
-      /* overflow: hidden; */
-      /* background: linear-gradient(to right, #ffffff, #f6f6f6); */
-      /* box-shadow: inset 0 1px 3px rgba(0,0,0,0.08); */
-      display: flex;
-      align-items: center;
-      position: relative;
-      border-top: 1px solid rgba(0,0,0,0.05);
-      border-bottom: 1px solid rgba(0,0,0,0.05);
-    }
-
-    .ticker-wrap {
-      display: flex;
-      white-space: nowrap;
-      animation: scrollTicker 25s linear infinite;
-    }
-
-    .ticker-wrap span {
-      background: #ffffff;
-      border: 1px solid #dddddd;
-      margin: 0 1rem;
-      padding: 0.6rem 1.8rem;
-      border-radius: 50px;
-      font-weight: 600;
-      color: #1b1b1b;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .ticker-wrap span:hover {
-      background: #e63946;
-      color: #ffffff;
-      cursor: pointer;
-    }
-
-    @keyframes scrollTicker {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    .ticker-content {
-      display: flex;
-    }
-
-    @media (max-width: 768px) {
-      .ticker-wrap span {
-        margin: 0 0.6rem;
-        padding: 0.5rem 1.2rem;
-        font-size: 0.9rem;
-      }
-
-      .course-ticker {
-         height: 80px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .ticker-wrap span {
-        margin: 0 0.5rem;
-        padding: 0.4rem 1rem;
-        font-size: 0.75rem;
-      }
-
-      .course-ticker {
-        height: 70px;
-       
-        margin-top: -30px;
-        /* margin-bottom: 20px; */
-        /* background: #000; */
-      
-        max-width: 100%!important;
-  
-        overflow: hidden;
-      }
-    }
-  </style>
   <style>
     :root {
       --red: #e63946;
@@ -249,6 +35,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
@@ -355,7 +142,7 @@
       padding-bottom: 10px !important;
       flex-wrap: wrap;
       position: relative;
-      /* height: 100vh; */
+     
     }
 
     .hero-text {
@@ -528,7 +315,7 @@
         flex-direction: row;
         text-align: center;
         /* gap: -90px; */
-        height:100vh;
+         height: 100vh;
       max-height: 100vh;
       
         background: linear-gradient(130deg, #ffffff 49%, #fce3e3 50%);
@@ -603,6 +390,7 @@
 </head>
 <body>
 
+
   <header>
     <div class="logo"><img src="hgi.png" alt=""></div>
     <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('show'); this.classList.toggle('open');">
@@ -617,110 +405,389 @@
     </nav>
   </header>
 
-  <section class="hero">
+<section class="hero" id="heroo">
     <div class="hero-text">
       <h1 class="glitch" data-text="HONEYWELL INFOTECH">HONEYWELL <br> INFOTECH</h1>
 <p>Honeywell InfoTech – <strong>Siruguppa’s </strong>trusted name in computer education. Learn from certified experts and elevate your skills with government-approved courses.</p>
 
-
-
-
-      <button>Get Started</button>
+<a href="courses.html"> <button>Get Started</button></a>
     </div>
 <div class="imgst">
     <div>
-    <img src="https://i.ytimg.com/vi/zEr-mm8OSGo/sddefault.jpg" alt="Student Image" class="hero-img" />
-    <h3 class="lead">Lead by: MR Anwar</h3>
+    <img src="sir.jpg" alt="Student Image" class="hero-img" />
+    <h3 class="lead">Led by: <br>MR Anwar</h3>
     </div>
 
     <div class="stats">
       <div class="stat">🎓 1000+ Students</div>
       <div class="stat2 stat">🏅 Govt Certified</div>
-      <div class="stat3 stat">💼 80% Placement</div>
+      <div class="stat3 stat">🧑‍💼 MS-Certified Trainer</div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 44444444444444444444444444444444444444  slider 4444444444444444444444444444444444 -->
+
+
+
+
+
+
+
+
+
+
+
+
+ <style>
+   .course-ticker {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     max-width:  110vw !important;
+      height: 100px;
+      margin-top: 10px;
+      /* margin-bottom: 20px; */
+      overflow: hidden;
+      /* overflow: hidden; */
+      /* background: linear-gradient(to right, #ffffff, #f6f6f6); */
+      /* box-shadow: inset 0 1px 3px rgba(0,0,0,0.08); */
+      display: flex;
+      align-items: center;
+      position: relative;
+      border-top: 1px solid rgba(0,0,0,0.05);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .ticker-wrap {
+      display: flex;
+      white-space: nowrap;
+      animation: scrollTicker 25s linear infinite;
+    }
+
+    .ticker-wrap span {
+      background: #ffffff;
+      border: 1px solid #dddddd;
+      margin: 0 1rem;
+      padding: 0.6rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 600;
+      color: #1b1b1b;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .ticker-wrap span:hover {
+      background: #e63946;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    @keyframes scrollTicker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .ticker-content {
+      display: flex;
+    }
+
+    @media (max-width: 768px) {
+      .ticker-wrap span {
+        margin: 0 0.6rem;
+        padding: 0.5rem 1.2rem;
+        font-size: 0.9rem;
+      }
+
+      .course-ticker {
+         height: 80px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .ticker-wrap span {
+        margin: 0 0.5rem;
+        padding: 0.4rem 1rem;
+        font-size: 0.75rem;
+      }
+
+      .course-ticker {
+        height: 70px;
+       
+        margin-top: -30px;
+        /* margin-bottom: 20px; */
+        /* background: #000; */
+      
+        max-width: 100%!important;
+  
+        overflow: hidden;
+      }
+    }
+  </style>
  <section class="course-ticker">
     <div class="ticker-wrap">
       <div class="ticker-content">
-        <span>C Language</span>
-        <span>Tally ERP</span>
-        <span>Computer Basics</span>
-        <span>Hardware & Networking</span>
-        <span>Typing Skills</span>
-        <span>Web Development</span>
-        <span>Python</span>
-        <span>MS Office</span>
+       <a href="courses.html"> <span>C Language</span>   </a>
+       <a href="courses.html"> <span>Tally ERP</span></a>
+       <a href="courses.html"> <span>Computer Basics</span></a>
+       <a href="courses.html"> <span>Hardware & Networking</span></a>
+       <a href="courses.html"> <span>Typing Skills</span></a>
+       <a href="courses.html"> <span>Web Development</span></a>
+       <a href="courses.html"> <span>Python</span></a>
+       <a href="courses.html"> <span>MS Office</span></a>
        
-        <span>C Language</span>
-        <span>Tally ERP</span>
-        <span>Computer Basics</span>
-        <span>Hardware & Networking</span>
-        <span>Typing Skills</span>
-        <span>Web Development</span>
-        <span>Python</span>
-        <span>MS Office</span>
+       <a href="courses.html"> <span>C Language</span></a>
+       <a href="courses.html"> <span>Tally ERP</span></a>
+       <a href="courses.html"> <span>Computer Basics</span></a>
+       <a href="courses.html"> <span>Hardware & Networking</span></a>
+       <a href="courses.html"> <span>Typing Skills</span></a>
+       <a href="courses.html"> <span>Web Development</span></a>
+       <a href="courses.html"> <span>Python</span></a>
+       <a href="courses.html"> <span>MS Office</span></a>
        
       </div>
     </div>
   </section>
 
 
-  </section>
+</section>
   
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 44444444444444444444444444444444444444  Courses 4444444444444444444444444444444444 -->
+
+
+
+
+
+
+   <style>
+   /* courses  */
+   a{
+  text-decoration: none;
+   }
+  .coursesmore{
+     margin-top: 1.5rem;
+   width: 150px;
+      padding: 10px 20px;
+      position: absolute;
+      right: 100px;
+      background: var(--red);
+      color: white;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+      transition: transform 0.2s ease;
+  }
+    section.courses {
+      padding: 5rem 2rem;
+      /* margin-top: 80px; */
+      padding-bottom: 100px;
+      background: 
+        linear-gradient(to bottom right, rgba(255,255,255,0.95), rgba(250, 250, 250, 0.9)),
+        url('https://www.transparenttextures.com/patterns/cubes.png');
+      background-size: cover;
+      background-repeat: repeat;
+      text-align: center;
+        color: #222;
+         font-family: 'Space Grotesk', sans-serif;
+         position: relative;
+    }
+    
+     .courses::before{
+   content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background-color: #010000;
+      border-radius: 2px;
+      }
+
+    .courses h2 {
+      font-size: 2.8rem;
+      color: #e63946;
+      margin-bottom: 3rem;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+    }
+
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .course-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      padding: 2rem 1.5rem 3rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      border: 1px solid #eee;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      /* text-align: left; */
+    }
+
+    .course-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    .course-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e63946;
+    }
+
+    .course-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .course-info {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+
+    .course-duration {
+      position: absolute;
+      bottom: 1.2rem;
+      left: 3.5rem;
+      font-size: 0.85rem;
+      color: #e63946;
+      font-weight: 600;
+      background: #fff8f8;
+      padding: 0.3rem 0.7rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    @media (max-width: 600px) {
+      .courses h2 {
+        font-size: 2rem;
+      }
+
+      .course-card {
+        padding: 1.5rem 1rem 3rem;
+      }
+
+      .course-title {
+        font-size: 1.1rem;
+      }
+
+      .course-duration {
+        font-size: 0.75rem;
+        left: 11rem;
+      }
+      .coursesmore{
+          margin-top: 0.7rem;
+   width: 120px;
+      padding: 10px 20px;
+      position: absolute;
+      right: 40px;
+      background: var(--red);
+    
+      font-size: 0.8rem;
+      }
+    }
+  </style>
   <section class="courses">
     <h2>Our Courses</h2>
     <div class="courses-grid">
       
-      <div class="course-card">
+   <a href="contact.html">   <div class="course-card">
         <div class="course-icon">💻</div>
         <div class="course-title">C Programming</div>
         <div class="course-info">Learn the fundamentals of programming and logic building with C language.</div>
         <div class="course-duration">Duration: 2 Months</div>
-      </div>
+      </div> </a>
 
-      <div class="course-card">
+    <a href="contact.html">  <div class="course-card">
         <div class="course-icon">🖥️</div>
         <div class="course-title">Computer Basics</div>
         <div class="course-info">Perfect for beginners — cover MS Office, internet, typing, and file handling.</div>
         <div class="course-duration">Duration: 1 Month</div>
-      </div>
+      </div> </a>
 
-      <div class="course-card">
+     <a href="contact.html"> <div class="course-card">
         <div class="course-icon">📊</div>
         <div class="course-title">Tally with GST</div>
         <div class="course-info">Master accounting and inventory management using Tally ERP with GST.</div>
         <div class="course-duration">Duration: 2 Months</div>
-      </div>
+      </div> </a>
 
-      <div class="course-card">
+    <a href="contact.html">  <div class="course-card">
         <div class="course-icon">🔧</div>
         <div class="course-title">Hardware & Networking</div>
         <div class="course-info">Get hands-on skills with assembling, troubleshooting, and networking computers.</div>
         <div class="course-duration">Duration: 3 Months</div>
-      </div>
+      </div> </a>
 
-      <a href=""><div class="coursesmore">More -></div></a>
+      <a href="courses.html"><div class="coursesmore">More -></div></a>
 
-      <!-- <div class="course-card">
-        <div class="course-icon">🌐</div>
-        <div class="course-title">Web Development</div>
-        <div class="course-info">Build modern websites using HTML, CSS, JavaScript, and real-world projects.</div>
-        <div class="course-duration">Duration: 3 Months</div>
-      </div>
-
-      <div class="course-card">
-        <div class="course-icon">🛡️</div>
-        <div class="course-title">Cybersecurity Basics</div>
-        <div class="course-info">Understand safe browsing, data protection, and digital security essentials.</div>
-        <div class="course-duration">Duration: 1.5 Months</div>
-      </div> -->
+     
 
     </div>
   </section>
 
 
-<!-- why scose us//////////////////wdwq -->
+
+
+
+
+
+
+
+
+
+<!-- 44444444444444444444444444444444444444  Why choose us? 4444444444444444444444444444444444 -->
+
+
+
+
+
+
+
 
   <style>
  .why-us::before{
@@ -859,13 +926,17 @@
 
 
 
+<!-- 44444444444444444444444444444444444444  Gallery  4444444444444444444444444444444444 -->
+
+
+
+
 
 
 
   <style>
     
-
-    section.gallery {
+  section.gallery {
            line-height: 1.6;
          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       padding: 5rem 2rem 6rem;
@@ -954,11 +1025,9 @@ box-shadow: 0 0 10px rgba(230, 57, 70, 0.4);
       <img src="https://i.ytimg.com/vi/zEr-mm8OSGo/sddefault.jpg" alt="Lab Session" />
       <img src="https://i.ytimg.com/vi/zEr-mm8OSGo/sddefault.jpg" alt="Training Session" />
          
-      <!-- <img src="https://i.ytimg.com/vi/zEr-mm8OSGo/sddefault.jpg" alt="Workshop" />
-      <img src="https://i.ytimg.com/vi/zEr-mm8OSGo/sddefault.jpg" alt="Student Group" />
-      <img src="https://i.ytimg.com/vi/zEr-mm8OSGo/sddefault.jpg" alt="Guest Lecture" /> -->
+     
     </div>
-     <a href=""><div class="coursesmore" >More -></div></a>
+     <a href="gallery.html"><div class="coursesmore" >More -></div></a>
   </section>
 
 
@@ -972,7 +1041,16 @@ box-shadow: 0 0 10px rgba(230, 57, 70, 0.4);
 
 
 
-<!-- cta7288888888888888888 -->
+<!-- 44444444444444444444444444444444444444  CTA section 4444444444444444444444444444444444 -->
+
+
+
+
+
+
+
+
+
    <style>
   .cta-section::before{
     content: '';
@@ -1075,7 +1153,7 @@ box-shadow: 0 0 10px rgba(230, 57, 70, 0.4);
       <h2>Visit Honeywell InfoTech</h2>
       <p>Join <strong>Siruguppa’s</strong> most trusted computer training center. We're located at a convenient spot in town — certified courses, expert faculty, and a great learning environment await you.</p>
       <div style="display: flex; gap:20px">
-        <a href="" ><i class="fa-brands fa-whatsapp" style="margin-right: 10px; font-size: 20px;"></i>   Contact</a>
+        <a href="https://wa.link/h4aeq6" ><i class="fa-brands fa-whatsapp" style="margin-right: 10px; font-size: 20px;"></i>Contact</a>
       <a href="https://maps.app.goo.gl/fnoGYHDLoFVodveq8" target="_blank">Open in Maps</a>
       </div>
     </div>
@@ -1084,6 +1162,23 @@ box-shadow: 0 0 10px rgba(230, 57, 70, 0.4);
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3842.3901882642253!2d76.8928099!3d15.624197099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb7bc5e8761e88d%3A0x98a87e0adc3890e9!2sHoney%20Well%20Info%20Tech!5e0!3m2!1sen!2sin!4v1749720088013!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
+
+
+
+
+
+
+
+
+
+<!-- 44444444444444444444444444444444444444  Footer  4444444444444444444444444444444444 -->
+
+
+
+
+
+
+
 
 
   <footer style="background: linear-gradient(135deg, #1e1e2f, #0d0d14); color: #e0e0e0; padding: 4rem 2rem 2rem; font-family: 'Segoe UI', sans-serif;">
@@ -1104,10 +1199,10 @@ box-shadow: 0 0 10px rgba(230, 57, 70, 0.4);
     <div style="flex: 1 1 150px;">
       <h3 style="color: #f26a4f; margin-bottom: 1rem; font-size: 1.2rem;">Quick Links</h3>
       <ul style="list-style: none; padding: 0; margin: 0;">
-        <li><a href="#" style="color: #ccc; text-decoration: none; line-height: 2;">Home</a></li>
-        <li><a href="#" style="color: #ccc; text-decoration: none; line-height: 2;">Courses</a></li>
-        <li><a href="#" style="color: #ccc; text-decoration: none; line-height: 2;">Gallery</a></li>
-        <li><a href="#" style="color: #ccc; text-decoration: none; line-height: 2;">Contact</a></li>
+        <li><a href="#heroo" style="color: #ccc; text-decoration: none; line-height: 2;">Home</a></li>
+        <li><a href="courses.html" style="color: #ccc; text-decoration: none; line-height: 2;">Courses</a></li>
+        <li><a href="gallery.html" style="color: #ccc; text-decoration: none; line-height: 2;">Gallery</a></li>
+        <li><a href="contact.html" style="color: #ccc; text-decoration: none; line-height: 2;">Contact</a></li>
       </ul>
     </div>
 
@@ -1116,7 +1211,7 @@ box-shadow: 0 0 10px rgba(230, 57, 70, 0.4);
       <h3 style="color: #f26a4f; margin-bottom: 1rem; font-size: 1.2rem;">Contact Us</h3>
       <p style="line-height: 1.8; color: #bbb;">
         📍 Siruguppa, Karnataka<br>
-        📞 +91 98765 43210<br>
+        📞 +91 98458 04987<br>
         ✉️ info@honeywelltech.in
       </p>
     </div>
